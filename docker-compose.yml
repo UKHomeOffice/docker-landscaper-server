@@ -1,0 +1,25 @@
+---
+postgres:
+  name: postgres
+  build: plpostgres/.
+  environment:
+   - POSTGRES_PASSWORD=password
+rabbitmq:
+  name: rabbitmq
+  image: rabbitmq:3-management
+  ports:
+   - "15672:15672"
+landscape-server:
+  build: .
+  environment:
+   - STARTUP_WAIT_TIME=10
+   - INITIALIZE_SCHEMA=yes
+   - DB_USER=postgres
+   - DB_PASS=password
+   - DB_LANDSCAPE_PASS=password
+  links:
+   - postgres
+   - rabbitmq
+  ports:
+   - "80:80"
+   - "443:443"
