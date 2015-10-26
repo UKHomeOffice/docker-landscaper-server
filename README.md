@@ -1,4 +1,6 @@
-Ubuntu LandScape Docker Container
+# Ubuntu LandScape Docker Container
+
+[![Build Status](https://travis-ci.org/UKHomeOffice/docker-landscape-server.svg?branch=master)](https://travis-ci.org/UKHomeOffice/docker-landscape-server)
 
 This container runs the Ubuntu landscape server components
 
