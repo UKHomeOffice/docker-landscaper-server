@@ -3,6 +3,8 @@ MAINTAINER oliver@cloudsurge.co.uk
 
 ENV DEBIAN_FRONTEND=noninteractive
 
+RUN apt-get update
+RUN apt-get -fy upgrade
 RUN apt-get install -fy software-properties-common
 
 #Add repository that contains the landscape server

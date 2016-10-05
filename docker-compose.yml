@@ -1,11 +1,9 @@
 ---
 postgres:
-  name: postgres
   build: plpostgres/.
   environment:
    - POSTGRES_PASSWORD=password
 rabbitmq:
-  name: rabbitmq
   image: rabbitmq:3-management
   ports:
    - "15672:15672"
